@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>iwong-做饭指南</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+<!--折叠箭头-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_3399833_pmq3hhqg7sj.css" />
+  <style>
+
+  img {
+    border-radius: 12px;
+}
+  /*图片居中*/
+.imgjz{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.markdown-section blockquote {
+    color: #2c3e50;
+    background: #e6f6e6;
+    padding: 5px 20px;
+    border-radius: 12px;
+}
+.markdown-section blockquote p {
+    font-weight: 500;
+}
+.markdown-section pre::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fc625d;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    z-index: 1;
+}
+/*代码自动换行*/
+.markdown-section pre[data-lang] code {
+    /*white-space: pre-wrap;*/
+    /*white-space: normal;*/
+    /*word-break: break-word;*/
+}
+
+/*代码黑底*/
+.markdown-section pre {
+    border-radius: 8px;
+    background: #0f1829;
+}
+.markdown-section pre[data-lang] code {
+    background: #0f1829;
+}
+/*代码黑底结束*/
+.markdown-section pre > code {
+    color: #c35ead;
+    /*font-size: 1rem;*/
+}
+.markdown-section > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code {
+    /*font-size: 1rem;*/
+}
+body {
+    /*font-size: 0.8rem;*/
+}
+body{
+    background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);
+    background-size: 20px 20px;
+    background-position: center center;
+}
+  /*左侧按钮整体位置*/
+  .sidebar ul {
+    padding-left: 15px;
+}
+
+  /*左侧栏按钮位置*/
+  .sidebar-nav ul:not(.app-sub-sidebar)>li:not(.file)::before {
+    left: -15px;
+}
+/*隐藏a标签下划线*/
+ a {
+      text-decoration: none;
+  }
+    /* 匹配mermaid样式 */
+    .markdown-section {
+      /*max-width: 800px;*/
+    }
+  /*iframe标签宽度和居中*/
+  .markdown-section iframe {
+    border: 0px solid #eee;
+    min-width: 330px;
+  }
+/*返回顶部svg颜色*/
+svg path{
+        fill: #42b983;
+}
+
+/*分页字体大小*/
+.pagination-item-title {
+      font-size: 0.7em !important;
+    }
+    /* 复制代码插件样式 */
+    .docsify-copy-code-button {
+      top: .5em !important;
+      right: .5em !important;
+      background: #f6f8fa !important;
+      border: 0.01em solid #ccc !important;
+      border-radius: 0.2em !important;
+      padding: 0.35em !important;
+    }
+  </style>
+
+</head>
+<body>
+
+  
+  <div id="app">等我一下 马上就好！</div>
+  <script>
+    window.$docsify = { 
+        
+    //添加编辑按钮
+//添加编辑按钮结束
+     autoHeader: true,
+      name: '🍛iwong做饭指南',
+       auto2top: true,
+      subMaxLevel: 6,
+    //   themeColor: '#42b983',
+      loadSidebar: '_sidebar.md'
+      alias: {
+      '/.*/_sidebar.md': '/_sidebar.md',
+    },
+    
+    // 字数统计配置
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+      // 分页导航插件配置项
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      //添加搜索框
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 Search',
+        noData: '😒 No Result',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },
+      // 复制代码插件配置项
+      copyCode: {
+        buttonText: '<svg t="1662470847369" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2413" width="18" height="18"><path d="M394.666667 106.666667h448a74.666667 74.666667 0 0 1 74.666666 74.666666v448a74.666667 74.666667 0 0 1-74.666666 74.666667H394.666667a74.666667 74.666667 0 0 1-74.666667-74.666667V181.333333a74.666667 74.666667 0 0 1 74.666667-74.666666z m0 64a10.666667 10.666667 0 0 0-10.666667 10.666666v448a10.666667 10.666667 0 0 0 10.666667 10.666667h448a10.666667 10.666667 0 0 0 10.666666-10.666667V181.333333a10.666667 10.666667 0 0 0-10.666666-10.666666H394.666667z m245.333333 597.333333a32 32 0 0 1 64 0v74.666667a74.666667 74.666667 0 0 1-74.666667 74.666666H181.333333a74.666667 74.666667 0 0 1-74.666666-74.666666V394.666667a74.666667 74.666667 0 0 1 74.666666-74.666667h74.666667a32 32 0 0 1 0 64h-74.666667a10.666667 10.666667 0 0 0-10.666666 10.666667v448a10.666667 10.666667 0 0 0 10.666666 10.666666h448a10.666667 10.666667 0 0 0 10.666667-10.666666v-74.666667z" p-id="2414"></path></svg>',
+        errorText: '<svg t="1662534611575" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2391" width="18" height="18"><path d="M739.2 287c12.3 12.3 12.3 32.3 0 44.6L331.4 739.4c-12.3 12.3-32.3 12.3-44.6 0-12.3-12.3-12.3-32.3 0-44.6L694.6 287c12.3-12.3 32.3-12.3 44.6 0z" fill="#d81e06" p-id="2392"></path><path d="M286.8 287c12.3-12.3 32.3-12.3 44.6 0l407.8 407.8c12.3 12.3 12.3 32.3 0 44.6-12.3 12.3-32.3 12.3-44.6 0L286.8 331.6c-12.3-12.3-12.3-32.3 0-44.6z" fill="#d81e06" p-id="2393"></path></svg>',
+        successText: '<svg t="1662472552578" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5674" width="18" height="18"><path d="M405.333333 768c-12.8 0-21.333333-4.266667-29.866666-12.8l-213.333334-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733334s42.666667-17.066667 59.733334 0l183.466666 183.466667 396.8-396.8c17.066667-17.066667 42.666667-17.066667 59.733334 0s17.066667 42.666667 0 59.733333l-426.666667 426.666667c-8.533333 8.533333-17.066667 12.8-29.866667 12.8z" p-id="5675" fill="#1a7f37"></path></svg>'
+      },
+    };
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- 字数统计插件 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 复制代码插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 分页导航插件 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- bash代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-markdown.js"></script>
+  <!-- 缩放图片插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 全文搜索插件： -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 回到顶部插件 -->
+  <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
+  <!-- 折叠左侧栏 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 烟花粒子 -->
+<script src="https://cdn.jsdelivr.net/npm/typecho_joe_theme@4.4.5/assets/cursor/cursor1.min.js"></script>
+
+<canvas width="1920" height="937" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+
+</body>
+
+</html>
